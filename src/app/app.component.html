@@ -1,8 +1,16 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar"
+  [class.waiting]="timerStatus === TimerStatus.WAITING"
+  [class.running]="timerStatus === TimerStatus.RUNNING"
+  [class.near-end]="timerStatus === TimerStatus.NEAR_END"
+  [class.expired]="timerStatus === TimerStatus.EXPIRED"
+  role="banner"
+>
   <h1 class="mat-title">{{ title }}</h1>
   <div class="spacer"></div>
-  <button mat-flat-button color="secondary" (click)="shakeBoard()">
+  <p class="mat-body-2" *ngIf="timerStatus !== TimerStatus.WAITING">Time remaining: {{timeRemaining}}</p>
+  <div class="spacer"></div>
+  <button mat-flat-button color="secondary" (click)="startGame()">
     New board
   </button>
 </div>

@@ -19,7 +19,6 @@
 
   .toolbar {
     align-items: center;
-    background-color: #1976d2;
     color: white;
     display: flex;
     height: 60px;
@@ -33,6 +32,22 @@
     h1 {
       font-weight: 700;
     }
+  }
+
+  .waiting {
+    background-color: #757575;
+  }
+
+  .running {
+    background-color: #2E7D32;
+  }
+
+  .near-end {
+    background-color: $board-color;
+  }
+
+  .expired {
+    background-color: #B71C1C;
   }
 
   .board {

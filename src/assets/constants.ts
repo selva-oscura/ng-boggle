@@ -16,3 +16,10 @@ export const DIES = [
   ['L', 'E', 'S', 'R', 'A', 'C'],
   ['O', 'A', 'T', 'C', 'I', 'A'],
 ];
+
+export enum TimerStatus {
+  WAITING,
+  RUNNING,
+  NEAR_END,
+  EXPIRED,
+}
