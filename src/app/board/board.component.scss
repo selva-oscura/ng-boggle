@@ -1,0 +1,69 @@
+$board-color: #e5af5b;
+$die-color: #eaeaea;
+$die-text-color: #424242;
+
+.row {
+  align-items: center;
+  border: 0px solid transparent;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: flex;
+  flex-direction: row;
+
+  &:first-child {
+    padding-top: 1vw;
+  }
+
+  &:last-child {
+    padding-bottom: 1vw;
+  }
+}
+
+.cell {
+  align-items: center;
+  background-color: $die-color;
+  border: 1vw solid $board-color;
+  border-radius: 3vw;
+  display: flex;
+  height: 24vw;
+  justify-content: center;
+  max-height: 24vw;
+  max-width: 24vw;
+  width: 24vw;
+
+  p {
+    color: $die-text-color;
+    font: 700 16vw/18vw Roboto, "Helvetica Neue", sans-serif;
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+}
+
+
+/* Responsive Styles */
+@media screen and (min-aspect-ratio:4/5) {
+  .row {
+    padding-left: 1vh;
+    padding-right: 1vh;
+
+    &:first-child {
+      padding-top: 1vh;
+    }
+
+    &:last-child {
+      padding-bottom: 1vh;
+    }
+  }
+
+  .cell {
+    border: 1vh solid $board-color;
+    height: calc(20vh - 30px);
+    max-height: calc(20vh - 30px);
+    max-width: calc(20vh - 30px);
+    width: calc(20vh - 30px);
+
+    p {
+      font: 700 11vh/20vh Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+}
