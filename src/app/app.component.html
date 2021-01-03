@@ -2,10 +2,13 @@
 <div class="toolbar" role="banner">
   <h1>{{ title }}</h1>
   <div class="spacer"></div>
-  <button mat-flat-button color="secondary" (click)="shakeBoard()">New board</button>
+  <button mat-flat-button color="secondary" (click)="shakeBoard()">
+    New board
+  </button>
 </div>
 
 <!-- Board -->
-<div class="content" role="main">
-  <app-board></app-board>
+<div class="board" role="main">
+  <app-board [board]="board">
+  </app-board>
 </div>
