@@ -6,6 +6,10 @@ Boggle -- basic Angular web application for generating Boggle game boards.
 
 This project was bootstrapped using [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+## To view on GitHub pages
+
+[https://selva-oscura.github.io/ng-boggle/](https://selva-oscura.github.io/ng-boggle/)
+
 ## To run locally (directions assume git, node, npm, and angular cli are already installed)
 
 To clone 
