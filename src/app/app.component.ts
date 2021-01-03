@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {DIES} from '../assets/constants';
+import { DIES } from '../assets/constants';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'Boggle';
   board: string[][] = [];
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.shakeBoard();
   }
 
-  shakeBoard(): void{
-    console.log('create board called');
+  shakeBoard(): void {
     let diesCopy = JSON.parse(JSON.stringify(DIES));
-    const	board: string[][] = [];
-    for (let row = 0; row < 4; row++){
+    const board: string[][] = [];
+    for (let row = 0; row < 4; row++) {
       const r = [];
-      for (let col = 0; col < 4; col++){
+      for (let col = 0; col < 4; col++) {
         const die = Math.floor(Math.random() * diesCopy.length);
         const face = Math.floor(Math.random() * 6);
         const faceValue = diesCopy[die][face];
@@ -29,6 +28,5 @@ export class AppComponent implements OnInit{
       board.push(r);
     }
     this.board = board;
-    console.log('board is', this.board);
   }
 }
